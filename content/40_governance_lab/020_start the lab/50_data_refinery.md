@@ -7,7 +7,7 @@ draft : false
 
 # Data Cleansing & Reshaping Lab
 
-In this lab, you will learn how to clean and reshape data using IBM Data Refinery flow.
+In the previous two excersies of this Lab you have learned how to integrate data. In this lab, you will learn how to clean and reshape data using IBM Data Refinery flow.
 
 ## Learning Objectives:
 > #### In this tutorial you will learn:
@@ -25,15 +25,20 @@ It should take you approximately 15 minutes to complete this lab.
 
 ## Lab Steps:
 
-> ### 1. Add Data Refinery flow by clicking `Add asset +` and then `Data Refinery`
+> ### 1. Add Data Refinery flow by clicking **Add asset +** and then **Data Refinery**
+
+Go to project home page by clicking Navigation Menu -> Projects -> All projects. From the project home page click **Add asset** and select **Data Refinery**.
 
 ![Data Ingestion](/images/30_governance_lab/data_refinery_1.png)
+
+Select the final data which we have created from DataStage pipeline. 
 ![Data Ingestion](/images/30_governance_lab/data_refinery_2.png)
 
 > ### 2. Define filter and criteria
 
+Click New step
 ![Data Ingestion](/images/30_governance_lab/data_refinery_3.png)
-> 1. Remove duplicate Email Addresses
+> 1. Click Remove duplicate to remove duplicate _Email Addresses_
 
 ![Data Ingestion](/images/30_governance_lab/data_refinery_4.png)
 ![Data Ingestion](/images/30_governance_lab/data_refinery_4.1.png)

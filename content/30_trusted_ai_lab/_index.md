@@ -12,17 +12,17 @@ In this lab, we will demonstrate how to generate datasets programmatically for b
 
 ## Use-cases
 
-1) Build Time-Series models in SageMaker to forecast future cases per Region & Country.
-2) Build multi class classification model to predict the risk index per Region which will help the healthcare officials to be better prepared for handling the pandemic.
+1) Build Time-Series models in SageMaker to **forecast future cases per Region & Country**.
+2) Build multi-class classification model to predict the **Risk Index per Region** which will help the healthcare officials to be better prepared for handling the pandemic.
 
 ### Wider Applicability
 
 The integrated solutions can be built for different domains like :
 
-* Retail (product recommendation)
+* Retail (Product recommendation)
 
-* BFSI (risk mitigation)
+* BFSI (Risk mitigation)
 
-* Manufacturing (optimize the capacity)
+* Manufacturing (Optimize the capacity)
 
-* Supply chain operations (vendor  management)
+* Supply chain operations (Vendor management)

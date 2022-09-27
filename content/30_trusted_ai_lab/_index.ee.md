@@ -10,19 +10,19 @@ pre = "<b>3. </b>"
 
 In this lab, we will demonstrate how to generate datasets programmatically for building predictive models in SageMaker and port the notebooks into IBM Cloud Pak for Data. We will run the SageMaker notebooks in Watson Studio canvas and generate scoring endpoints for predictions.
 
-# Use-cases
+## Use-cases
 
-1) Build Time-Series models in SageMaker to forecast future cases per Region & Country.
-2) Build multi class classification model to predict the risk index per Region which will help the healthcare officials to be better prepared for handling the pandemic.
+1) Build Time-Series models in SageMaker to **forecast future cases per Region & Country**.
+2) Build multi-class classification model to predict the **Risk Index per Region** which will help the healthcare officials to be better prepared for handling the pandemic.
 
-## Wider Applicability
+### Wider Applicability
 
 The integrated solutions can be built for different domains like :
 
-* Retail (product recommendation)
+* Retail (Product recommendation)
 
-* BFSI (risk mitigation)
+* BFSI (Risk mitigation)
 
-* Manufacturing (optimize the capacity)
+* Manufacturing (Optimize the capacity)
 
-* Supply chain operations (vendor  management)
+* Supply chain operations (Vendor management)

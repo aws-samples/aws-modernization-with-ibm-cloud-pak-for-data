@@ -58,5 +58,5 @@ In this lab exercise, you will learn a popular machine learning algorithm, Decis
 You have successfully completed this lab exercise.
 
 {{% notice info %}}
-Next steps - [Visualize the Data in Cognos Embedded Dashboard](/50_lab_4/020_start-the-lab/visualize/)
+Next steps - [Visualize the Data in Cognos Embedded Dashboard](/60_low_no_code_ml_lab/020_start-the-lab/visualize/)
 {{% /notice %}}

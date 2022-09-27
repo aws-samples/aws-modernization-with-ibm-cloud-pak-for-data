@@ -1,8 +1,9 @@
 ---
 title: "Introduction"
 weight: 10
-chapter: true
+chapter: false
 draft: false
+pre: '<i class="fa fa-film" aria-hidden="true"></i> '
 ---
 
 **Introduction to Lab 1**
@@ -11,7 +12,7 @@ Author: [Sharath Kumar RK](https://www.linkedin.com/in/sharath-kumar-rk-52aa2562
 
 Welcome to the Trusted AI Lab!
 
-In this lab, we will demonstrate how to generate use-cases, build predictive models in SageMaker and port the notebooks & models into IBM Cloud Pak for Data. We will run the SageMaker notebooks in Watson Studio canvas and generate predictions.
+In this immersion day lab, we will demonstrate how to generate use-cases, build predictive models in SageMaker and port the notebooks & models into IBM Cloud Pak for Data. We will run the SageMaker notebooks in Watson Studio canvas and generate predictions.
 
 The intent of this workshop is to educate users about the features of AWS SageMaker & IBM Cloud Pak for Data running on AWS.
 

@@ -1,8 +1,9 @@
 ---
 title: "License"
-weight: 40
+weight: 15
 chapter: true
 draft: false
+pre: '<i class="fa fa-flask" aria-hidden="true"></i> '
 ---
 
 # License

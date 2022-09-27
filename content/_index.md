@@ -29,7 +29,7 @@ IBM Cloud Pak for Data (CP4D) on AWS Modernization Workshop is divided into 5 di
 
 * Lab - 3: **Governance Lab**. Learn how to use different approaches to integrate data coming from different data sources in hybrid cloud environment. Moreover, attendees will also learn how to run ETL pipeline, how to clean, reshape, and govern the data. This lab will help attendees learn about IBM DataStage, Data Virtualization, IBM Watson Knowledge Catalog and how to integrate with Amazon S3, Amazon RedShift, Amazon RDS.
 
-* Lab - 4: **Visualization & Insights Lab**. Learn the Visualization & Insights capabilities of IBM Cognos Analytics on the AWS Cloud. 
+* Lab - 4: **Visualization & Insights Lab**. Learn the Visualization & Insights capabilities of IBM Cognos Analytics on the AWS Cloud.
 
 * Lab - 5: **Low/No Code ML Lab**. You will learn how to use IBM Watson Studio AutoAI to rapidly prototype machine learning models, accelerating time-to-value.
 

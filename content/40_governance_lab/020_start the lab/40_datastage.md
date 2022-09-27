@@ -9,8 +9,8 @@ draft : false
 
 ## Learning Objectives:
 > #### In this tutorial you will learn:
-> 1. How to make a connection between external data source and IBM Cloud Pak for Data
-> 2. How to create ETL pipeline using IBM DataStage
+> 1. How to make a connection between external data source and IBM Cloud Pak for Data.
+> 2. How to create ETL pipeline using IBM DataStage.
 > 3. How to create scheduling rule to create data integration pipeline.
 
 ## Prerequisites
@@ -28,20 +28,20 @@ It should take you approximately 15 minutes to complete this lab.
 
 > 1. Login to IBM Cloud Pak for Data with valid credentials
 
-To perform this lab you need IBM Cloud Pak for Data's credential which include both username and password. If you do not have the credentials then refer LAB-0 to get the one.
+To perform this lab you need IBM Cloud Pak for Data's credential which include both username and password. If you do not have the credentials then refer **Infra Provisioning Lab** to get the one.
 
 ![Login](/images/30_governance_lab/login.png)
 
 > ### 2. Create new project
 
-Click on the Navigation Menu and expend Projects and click All Projects. Then click `New Project +` and then select `Analytics project` to create new analytics project
+Click on the Navigation Menu and expend Projects and click All Projects. Then click **New Project +** and then select **Analytics project** to create new analytics project
 
 ![DV Menu](/images/30_governance_lab/project-1.png)
 
-Click `Create an empty project`
+Click **Create an empty project**
 ![DV Menu](/images/30_governance_lab/project-3.png)
 
-Specify a name to new project and click `Create`
+Specify a name to new project and click **Create**
 ![DV Menu](/images/30_governance_lab/project-4.png)
 
 Once project is created you will see project homepage.
@@ -49,20 +49,20 @@ Once project is created you will see project homepage.
 
 > ### 3. Create new connections with external data sources.
 
-> 1. Click `New asset +`
+> 1. Click **New asset +**
 
 ![Create connection](/images/30_governance_lab/create_connection.png)
 
-Click `Connection`
+Click **Connection**
 
 ![Create connection](/images/30_governance_lab/create_connection_1.1.png)
 
 
-> 2. Choose Amazon S3 as connection type.
+> 2. Choose **Amazon S3** as connection type.
 
 ![Amazon S3](/images/30_governance_lab/create_connection_2.png)
 
-> 3. Specify Amazon S3 connection details (Provided as part of Lab - 0 ) to make connection between Amazon S3 and IBM Cloud Pak for Data.
+> 3. Specify Amazon S3 connection details (Provided as part of _Infra Provisioning Lab_ ) to make connection between Amazon S3 and IBM Cloud Pak for Data.
 
 > 4. Click Test connection to validate the connection. If it is successful click Create to create S3 connection.
 
@@ -70,7 +70,7 @@ Click `Connection`
 
 ![Amazon S3 Test Connection](/images/30_governance_lab/s3_test_connection_success.png)
 
-> 5. Similarly perform same step to create connection for asset type Amazon Redshift, and Amazon RDS for PostgreSQL.
+> 5. Similarly perform same step to create connection for asset type **Amazon Redshift**, and **Amazon RDS for PostgreSQL**.
 
 ![Create connection](/images/30_governance_lab/create_connection.png)
 
@@ -78,9 +78,11 @@ Select Amazon Redshift
 
 ![Data Ingestion](/images/30_governance_lab/redshift_connection_page.png)
 
-Specify the connection details provided as part of Lab - 0  and then click on `Test connection`. If test connection is successful, then click `Create` to create new Redshift connection
+Specify the connection details provided as part of _Infra Provisioning Lab_  and then click on **Test connection**. If test connection is successful, then click **Create** to create new Redshift connection
 
 ![Data Ingestion](/images/30_governance_lab/redshift_connection_1.png)
+
+In the project home page, click **New asset+** to create Amazon RDS connection.
 
 ![Create connection](/images/30_governance_lab/create_connection.png)
 
@@ -88,50 +90,50 @@ Select Amazon RDS for PostgreSQL
 
 ![Data Ingestion](/images/30_governance_lab/aurora_connection_page.png)
 
-Specify the connection details provided as part of Lab - 0  and then click on `Test connection`. If test connection is successful, then click `Create` to create new Aurora PostgreSQL DB connection
+Specify the connection details provided as part of _Infra Provisioning Lab_  and then click on **Test connection**. If test connection is successful, then click **Create** to create new Aurora PostgreSQL DB connection
 
 ![Data Ingestion](/images/30_governance_lab/aurora_connection.png)
 
-> 6. Since we have created data source connection, now lets ingest data from connected data source. Click `Add asset+` and then click `Connected data`
+> 6. Since we have created data source connection, now lets ingest data from connected data source. Click **Add asset+** and then click **Connected data**
 
 ![Create connection](/images/30_governance_lab/create_connection.png)
 
 ![Data Ingestion](/images/30_governance_lab/create_connection_1.1_gen.png)
 
 
-Click `Select source`
+Click **Select source**
 ![Data Ingestion](/images/30_governance_lab/select_data_source.png)
 
-Select Amazon S3 connection and select `apotheca_healthcare_personnel_data.csv` and then click `Select`
+Select Amazon S3 connection and select **apotheca_healthcare_personnel_data.csv** and then click **Select**
 ![Data Ingestion](/images/30_governance_lab/select_connection_source_s3.png)
 
 Specify a name to data asset
 ![Data Ingestion](/images/30_governance_lab/select_connection_source_s3_1.png)
 
-> 7. Similarly collect data from redshift data source. Click `Add asset+` and then click `Connected data`
+> 7. Similarly collect data from redshift data source. Click **Add asset+** and then click **Connected data**
 
 ![Create connection](/images/30_governance_lab/create_connection.png)
 
 ![Data Ingestion](/images/30_governance_lab/create_connection_1.1_gen.png)
 
-Click `Select source`
+Click **Select source**
 ![Data Ingestion](/images/30_governance_lab/select_data_source.png)
 
-Select Amazon Redshift connection and select `actavis_pharma_healthcare_personnel_table` and then click `Select`
+Select Amazon Redshift connection and select **actavis_pharma_healthcare_personnel_table** and then click **Select**
 ![Data Ingestion](/images/30_governance_lab/redshift_asset_discovery.png)
 
 ![Data Ingestion](/images/30_governance_lab/redshift_asset_discovery_1.png)
 
-> 8. Similarly ingest data from Amazon Aurora PostgreSQL database. Click `Add asset+` and then click `Connected data`
+> 8. Similarly ingest data from Amazon Aurora PostgreSQL database. Click **Add asset+** and then click **Connected data**
 
 ![Create connection](/images/30_governance_lab/create_connection.png)
 
 ![Data Ingestion](/images/30_governance_lab/create_connection_1.1_gen.png)
 
-Click `Select source`
+Click **Select source**
 ![Data Ingestion](/images/30_governance_lab/select_data_source.png)
 
-Select Amazon RDS for PostgreSQL connection and select `mylan_specialty_personnel_data_table` and then click `Select`
+Select Amazon RDS for PostgreSQL connection and select **mylan_specialty_personnel_data_table** and then click **Select**
 
 ![Data Ingestion](/images/30_governance_lab/aurora_select_connection_source.png)
 
@@ -191,36 +193,36 @@ Finally after adding all three connections and data assets, you could see all as
 
 ![DataStage Asset Browser](/images/30_governance_lab/remove_duplicate_by_1.png)
 
-> 19. Double click on Remove Duplicate Stage and click `Edit` to specify keys that define duplicates
+> 19. Double click on Remove Duplicate Stage and click **Edit** to specify keys that define duplicates
 
 ![DataStage Asset Browser](/images/30_governance_lab/remove_duplicate_by_2.png)
 
-Click `Add key +`
+Click **Add key +**
 ![DataStage Asset Browser](/images/30_governance_lab/remove_duplicate_by_3.png)
 
-Specify `id` as key
+Specify **id** as key
 ![DataStage Asset Browser](/images/30_governance_lab/remove_duplicate_by_4.png)
 
-Verify that `id` is coming as key and then click `Save`
+Verify that **id** is coming as key and then click **Save**
 ![DataStage Asset Browser](/images/30_governance_lab/remove_duplicate_by_5.png)
 
 > 20. Search sort and drag and drop Sort stage.
 
 ![DataStage Asset Browser](/images/30_governance_lab/sort_by_1.png)
 
-Double click on Sort stage and then click `Edit` in Sorting Keys.
+Double click on Sort stage and then click **Edit** in Sorting Keys.
 ![DataStage Asset Browser](/images/30_governance_lab/sort_by_2.png)
 
-Select `id` as sort key and click `Apply` button
+Select **id** as sort key and click **Apply** button
 ![DataStage Asset Browser](/images/30_governance_lab/sort_by_3.png)
 
-Click `Apply and return`
+Click **Apply and return**
 ![DataStage Asset Browser](/images/30_governance_lab/sort_by_4.png)
 
-Verify that `id` is coming as Sorting key and then click `Save`
+Verify that **id** is coming as Sorting key and then click **Save**
 ![DataStage Asset Browser](/images/30_governance_lab/sort_by_5.png)
 
-> 21. Search `rds` and then drag and drop `Amazon RDS for PostgreSQL` connector to canvas.
+> 21. Search **rds** and then drag and drop **Amazon RDS for PostgreSQL** connector to canvas.
 
 ![DataStage Asset Browser](/images/30_governance_lab/datastage_output_1.png)
 
@@ -243,10 +245,10 @@ Verify that `id` is coming as Sorting key and then click `Save`
 ![Data Ingestion](/images/30_governance_lab/create_connection_1.1_gen.png)
 
 
-Click `Select source`
+Click **Select source**
 ![Data Ingestion](/images/30_governance_lab/select_data_source.png)
 
-Search the integrated table and click `Select`
+Search the integrated table and click **Select**
 ![DataStage Asset Browser](/images/30_governance_lab/integrated_table.png)
 
 ![DataStage Asset Browser](/images/30_governance_lab/integrated_table_1.png)
