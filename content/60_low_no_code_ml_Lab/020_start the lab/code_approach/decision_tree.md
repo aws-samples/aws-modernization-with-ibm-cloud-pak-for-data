@@ -14,19 +14,17 @@ In this lab exercise, you will learn a popular machine learning algorithm, Decis
 
 ## Notebook 3 : Risk Index Prediction with Decision Tree
 
-- In Cloud Pak for Data, click on the **Assets** tab on top, under **Asset types** expand the **Source code** tab and select **Notebook**.
+1. In Cloud Pak for Data, click on the **Assets** tab on top, under **Asset types** expand the **Source code** tab and select **Notebook**.
 
-- You will see the three notebooks listed. You will refer to the **Region-All-Decision-Tree.ipynb** notebook.
+1. You will see the three notebooks listed. You will refer to the **Region-All-Decision-Tree.ipynb** notebook.
 
-- Click on the **three dot** menu and select **edit** to get started.
+1. Click on the **three dot** menu and select **edit** to get started.
+![brussels-edit](/images/50_low_no_code_ml_Lab/edit-nb-3.png?classes=shadow)
 
-  ![brussels-edit](/images/50_low_no_code_ml_Lab/edit-nb-3.gif?classes=shadow)
+1. The notebook should look something as shown below.
+![notebook-preview](/images/50_low_no_code_ml_Lab/notebook3-preview.png?classes=shadow)
 
-- The notebook should look something as shown below.
-
-  ![notebook-preview](/images/50_low_no_code_ml_Lab/notebook3-preview.png?classes=shadow)
-
-- Before running the notebook, you need to add the S3 connection to the notebook.
+1. Before running the notebook, you need to add the S3 connection to the notebook.
   - Click on the third code cell in the notebook.
   - Click on **find and add data** button on top right.
   - Click on **Connections** tab.
@@ -35,28 +33,21 @@ In this lab exercise, you will learn a popular machine learning algorithm, Decis
 
   ![add-data-connection](/images/50_low_no_code_ml_Lab/add-data-connection-nb3.gif?classes=shadow)
 
-- Verify the dataframe name to be `data_df_1` in the generated code snippet.
+6. Verify the dataframe name to be `data_df_1` in the generated code snippet.
 
-- Click on **Cell** and select **Run All** to run the notebook.
+7. Click on **Cell** and select **Run All** to run the notebook.
+![run-notebook](/images/50_low_no_code_ml_Lab/notebook3-run-all.png?classes=shadow)
 
-  ![run-notebook](/images/50_low_no_code_ml_Lab/notebook3-run-all.png?classes=shadow)
+8. This will run the notebook, it will take some time please be patient.
 
-- This will run the notebook, it will take some time please be patient.
-
-- Once the notebook is completed you can observe the following in the notebook:
+9. Once the notebook is completed you can observe the following in the notebook:
   - **Decision Tree Model Accuracy**
   - **Decision Tree Visualization**
 
-- **Decision Tree Model Accuracy:** You can observe the accuracy of the model is 86.63%.
+10. **Decision Tree Model Accuracy:** You can observe the accuracy of the model is 86.63%.
+![nb2-current-trend](/images/50_low_no_code_ml_Lab/dt-accuracy.png?classes=shadow)
 
-  ![nb2-current-trend](/images/50_low_no_code_ml_Lab/dt-accuracy.png?classes=shadow)
+11. **Decision Tree Visualization:** You can observe the decision tree in the notebook.
+![nb2-lstm-accuracy](/images/50_low_no_code_ml_Lab/dt.png?classes=shadow)
 
-- **Decision Tree Visualization:** You can observe the decision tree in the notebook.
-
-  ![nb2-lstm-accuracy](/images/50_low_no_code_ml_Lab/dt.png?classes=shadow)
-
-You have successfully completed this lab exercise.
-
-{{% notice info %}}
-Next steps - [Visualize the Data in Cognos Embedded Dashboard](/60_low_no_code_ml_lab/020_start-the-lab/visualize/)
-{{% /notice %}}
+You have successfully completed this lab exercise. You can proceed to the next step.

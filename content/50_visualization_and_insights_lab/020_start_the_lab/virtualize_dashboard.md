@@ -13,9 +13,9 @@ In this section we will use a Dashboard module which provides users a way to com
 
 ### Create a Dashboard
 
-From the Cognos Analytics home page, select the `+ New` icon in the lower left corner. Select `Dashboard`. Select the default template and click on `Create`.
+From the Cognos Analytics home page, select the **+ New** icon in the lower left corner. Select **Dashboard**. Select the default template and click on **Create**.
 
-Click `Select a source` and Select the `Data module` you just created in the previous section, and click `Add`.
+Click **Select a source** and Select the **Data module** you just created in the previous section, and click **Add**.
 
 ![SelectSourceDM](/images/40_visualization_and_insights_lab/SelectSourceDM.png?classes=shadow) 
 
@@ -49,29 +49,29 @@ There are different types of visualizations available for us to consume. See bel
 
 Our first visualization will be a Map containing "Risk Index for REGION". It will also serve as a filter - if a region is selected, all of the other visualizations on the dashboard will change its focus to that region. Example, if we select 'Belgium' region, then the rest of the widgets in the dashboard will filter for that region.
 
-Select `REGION' field and 'Risk Index' from the  -> ts-data-region_mod` in the resource list and drag it onto the canvas.
+Select **'REGION' and 'Risk Index' from the  -> ts-data-region_mod** in the resource list and drag it onto the canvas.
 
 
 ![RiskIndexWidget](/images/40_visualization_and_insights_lab/RiskIndexWidget.png?classes=shadow)
 
 Use the box sizing tools to position the box in the upper left-hand corner of the dashboard.
 
-Use the `Expand/Collapse` button in the upper right-hand corner of your visualization to view in expanded or collapse the view in your dashboard canvas.
+Use the **Expand/Collapse** button in the upper right-hand corner of your visualization to view in expanded or collapse the view in your dashboard canvas.
 
 Now, you can play with the properties for this widget. For example, we can disable the chart legend. See below screenshot for reference.
 ![DisableLegend](/images/40_visualization_and_insights_lab/DisableLegend.png?classes=shadow)
 
-Using the same methods described for `Risk Index map widget`, change the title, axis labels, and color, etc..
+Using the same methods described for **Risk Index map widget**, change the title, axis labels, and color, etc..
 
 ### Summary Metrics Widget
 
 Next we want to show the summary of metrics such as Total number of Active Cases bye region, Total deaths, Total Vaccination, Total tests done, etc..
 
-From the available visualizations, drag and drop the `summary` vissualization onto the canvas. See below screenshot for refernce.
+From the available visualizations, drag and drop the **summary** vissualization onto the canvas. See below screenshot for refernce.
 
 ![SummaryWidget](/images/40_visualization_and_insights_lab/SummaryWidget.png?classes=shadow)
 
-Select `CASES` field from the `Merged_HOSP_CAS` of the resource list. You will then see the total active covid cases for all the regions.
+Select **CASES** field from the **Merged_HOSP_CAS** of the resource list. You will then see the total active covid cases for all the regions.
 ![ActiveCasesSummary](/images/40_visualization_and_insights_lab/ActiveCasesSummary.png?classes=shadow)
 
 
@@ -89,15 +89,15 @@ Similary create summary for others. Such as :
 
 ### Cases by Gender and Age group
 
-Similar to the `Risk Index` chart, we want to also show Covid analysis by Gender and Age group. 
+Similar to the **Risk Index** chart, we want to also show Covid analysis by Gender and Age group. 
 
 Firstly drag and drop the pie chart visulaization on to the canvas, then
-Select `Gender and Count` from Merged_HOSP-CAS resource and drag and drop on the pie chart.
+Select **Gender and Count** from Merged_HOSP-CAS resource and drag and drop on the pie chart.
 ![PieChartGender](/images/40_visualization_and_insights_lab/PieChartGender.png?classes=shadow)
 
 Similaly, create a line chart for Total covid Cases by Age Group.
 Drag and drop the Line chart visulaization on to the canvas, then
-Select `Age Group and Count` from Merged_HOSP-CAS resource and drag and drop on the pie chart.
+Select **Age Group and Count** from Merged_HOSP-CAS resource and drag and drop on the pie chart.
 ![LineChartAgeGroup](/images/40_visualization_and_insights_lab/LineChartAgeGroup.png?classes=shadow)
 
 With the above knowledge, you should be able to create other widgets such as:
@@ -109,11 +109,11 @@ With the above knowledge, you should be able to create other widgets such as:
 
 ### Create a second tab for Data virtualization source data within the same dashboard
 
-Click on `Add tab` to add more visualization using data virtualization as a data source.
+Click on **Add tab** to add more visualization using data virtualization as a data source.
 
 ![Tab2](/images/40_visualization_and_insights_lab/Tab2.png?classes=shadow)
 
-Click `Select a source` and Select the `Data module` you created for data virtualization source, and click `Add`.
+Click **Select a source** and Select the **Data module** you created for data virtualization source, and click **Add**.
 
 ![DvDataSource](/images/40_visualization_and_insights_lab/DvDataSource.png?classes=shadow)
 
@@ -124,7 +124,7 @@ See the below widget for your reference which will help to create a similar one.
 
 Once you complete the above widgets, Save the dashboard.
 
-To convert the dahsboard visual theme, you could use the dashboard properties and select the Dark scheme from `Color and theme`tab.
+To convert the dahsboard visual theme, you could use the dashboard properties and select the Dark scheme from **Color and theme**tab.
 See below screenshot for refernce.
 
 ![DarkMode](/images/40_visualization_and_insights_lab/DarkMode.png?classes=shadow)
@@ -135,8 +135,7 @@ Congratulations! You have completed your first Cognos Analytics dashboard. The l
 ![FinalDashboard](/images/40_visualization_and_insights_lab/FinalDashboard.png?classes=shadow)
 
 {{% notice note %}}
-NOTE: At any time, you can click on the `Edit or preview` button in the main menu bar to toggle between edit and preview mode. Click on `Preview` mode to get a better look at our current dashboard. 
+NOTE: At any time, you can click on the **Edit or preview** button in the main menu bar to toggle between edit and preview mode. Click on **Preview** mode to get a better look at our current dashboard. 
 
-When toggling back to `Edit` mode, you may have to click the `Data` icon (`0111`) to display the resource list.
+When toggling back to **Edit** mode, you may have to click the **Data** icon (**0111**) to display the resource list.
 {{% /notice %}}
-

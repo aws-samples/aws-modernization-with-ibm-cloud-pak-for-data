@@ -6,52 +6,58 @@ draft: false
 ---
 
 > #### Note:
-> Data (COVID19BE_HOSP.csv & COVID19BE_CASES_AGESEX.csv) required for this lab has been uploaded to Amazon S3 bucket as the part of infrastructure automation. Update the bucket name from Lab 0 steps and use the BUCKET_REGION as **us-east-2**.
+> Data (COVID19BE_HOSP.csv & COVID19BE_CASES_AGESEX.csv) required for this lab has been uploaded to Amazon S3 bucket as the part of infrastructure automation. **Update the BUCKET_REGION as us-east-2**.
 
-**Kindly keep the credentials from S3, SageMaker handy for getting started with Trusted AI.**
+Kindly keep the credentials from CPD, S3, SageMaker, DB2 handy for getting started with Trusted AI.
 
-**We will use the predictive models built in SageMaker to continue with the steps per below.**
+**You would need the below for this Lab** :- You will get these details in the **./printcredentials.sh** step from the Infrastructure Provisioning Lab.
+
+* **S3 Bucket Name**
+* **SageMaker Access key & Secret Key**
+* **SageMaker role**
+* **CPD username & password**
+* **DB2 Hostname, username & password**
+
+**Download** the notebook {{% button href="/data-pre-processing/Data-pre-processing.ipynb" icon="fas fa-download" icon-position="right" %}}Data-pre-processing.ipynb{{% /button %}} into your local file system.
+
+**Please make sure to update the Region, Access Key & Secret Key in the Notebook wherever specified before running the notebook.**
+
+**We have created multiple SageMaker Notebooks for this lab to simulate the Data Science experience.** You can start by uploading **Data-pre-processing.ipynb** notebook and try the remaining three notebooks offline using the same process.
+
+**Create a SageMaker Notebook instance**
 
 Login to the SageMaker console and click on Notebook instances under Notebook in the navigation pane.
 
 ![](/images/20_trusted_ai_lab/sm-login.png)
 
-Click on create notebook instance, give it at name like **Lab1**, select the Notebook instance type as **ml.t2.medium**, Platform Identifier as **Amazon Linux 1, Jupyter Lab 1** & IAM role as shown below. It will take a couple of minutes for the instance to be created. Be patient!
+Click on create notebook instance, give it at name like **Lab1**, select the Notebook instance type as **ml.t2.medium**, Platform Identifier as **Amazon Linux 2, Jupyter Lab 1** & IAM role as shown below. It will take a couple of minutes for the instance to be created. Be patient!
 
 ![](/images/20_trusted_ai_lab/crt-nb-sm.png)
 
-After the instance is created, click on open Jupyter. 
+After the instance is created, click on open Jupyter. Click on **Upload** on the top right side to upload notebooks. 
 
-Click on **Upload** on the top right side to upload notebooks. **Download all the notebooks {{% button href="/notebooks/Notebooks.zip" icon="fas fa-download" icon-position="right" %}}Notebooks.zip{{% /button %}} into your local file system and unzip the file. 
+Select the Kernel as **conda_python3** when prompted and choose **Set Kernel** option. 
 
-Select the Kernel as **conda_python3** when prompted and choose **Set Kernel** option.
-
-**You can upload all the notebooks in one go by clicking on UPLOAD option and run them in SageMaker. Make sure to update the Region, Access Key & Secret Key in the Notebooks wherever specified before running the notebooks. After the notebooks are uploaded, it will reflect per below.**
+**Note**:-You can upload all the notebooks in one go by clicking on UPLOAD option, select the notebooks and run them in SageMaker. After the notebooks are uploaded, it will reflect per below.
 
 ![](/images/20_trusted_ai_lab/opn-nb-sm.png)
 
-**After uploading the notebooks, update the AWS credentials, click on Kernel and choose Restart & Run All option.**
+**After uploading the notebook/s, click on the notebook hyperlink to open it, update the AWS credentials, click on Kernel and choose Restart & Run All option.** 
 
-When a notebook is executed, what is actually happening is that each code cell in
-the notebook is executed, in order, from top to bottom.
+![](/images/20_trusted_ai_lab/opn-nb-sm.png)
 
-Each code cell is selectable and is preceded by a tag in the left margin. The tag
-format is **In [x]:**. Depending on the state of the notebook, the **x** can be:
+![](/images/20_trusted_ai_lab/run-nb.png)
 
-* A blank, this indicates that the cell has never been executed.
-* A number, this number represents the relative order this code step was executed.
-* A `*`, this indicates that the cell is currently executing.
+**You should see something like this after successfully running the Notebooks.**
 
-**There are several ways to execute the code cells in your notebook:**
+![](/images/20_trusted_ai_lab/nb-run.png)
 
-* One cell at a time.
-  * Select the cell, and then press the `Play` button in the toolbar.
-* Batch mode, in sequential order.
-  * From the **Cell** menu bar, there are several options available. For example, you
-    can **Run All** cells in your notebook, or you can **Run All Below**, that will
-    start executing from the first cell under the currently selected cell, and then
-    continue executing all cells that follow.**
-
-**Download the SageMaker Notebooks to be ported to Cloud Pak for Data - Select/Open the notebook - click on File - Download as - Notebook(.ipynb) into your local file system.**
+**Let's download the SageMaker Notebook/s to be ported to Cloud Pak for Data - Select/Open the notebook - click on File - Download as - Notebook(.ipynb) into your local file system.** >  
 
 ![](/images/20_trusted_ai_lab/dw-nb-sm.png)
+
+**Optional**
+
+**Repeat these steps for the other notebooks offline.**
+
+**Download** the remaining three notebooks {{% button href="/notebooks/Notebooks.zip" icon="fas fa-download" icon-position="right" %}}Notebooks.zip{{% /button %}} into your local file system and unzip the file. Follow the process above to upload them into SageMaker, run the notebooks and download the notebooks into your local system which can be ported to Cloud Pak for Data.

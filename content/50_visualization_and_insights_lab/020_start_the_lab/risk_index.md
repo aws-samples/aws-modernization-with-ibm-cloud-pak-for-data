@@ -7,15 +7,15 @@ draft: false
 
 # Create a data module for Risk index and PII dashboard
 
-* From the main dashboard, select the `+` icon in the lower left corner. Select `Data module` as shown below. 
+* From the main dashboard, select the **+** icon in the lower left corner. Select **Data module** as shown below. 
 
 ![data-module](/images/40_visualization_and_insights_lab/data-module.png?classes=shadow)
 
-* From the source selection panel, click on `Data server and schemas` tab. Click the `postgreSQL` connection that you have created in step 2.1 . Select the `public` folder and click on `OK`. This will open `Add tables` panel. In the `Add tables` panel select `Select tables` and click on `Next`. Select the tables mentioned below and click on `OK`.
+* From the source selection panel, click on **Data server and schemas** tab. Click the **postgreSQL** connection that you have created in step 2.1 . Select the **public** folder and click on **OK**. This will open **Add tables** panel. In the **Add tables** panel select **Select tables** and click on **Next**. Select the tables mentioned below and click on **OK**.
 
 ![tables](/images/40_visualization_and_insights_lab/tables.png?classes=shadow) 
 
-* You will be redirected to a `New data module` panel. Select the `Relationships` tab as shown below to view the files in the graphic editor. At this point, no relationships will exist.
+* You will be redirected to a **New data module** panel. Select the **Relationships** tab as shown below to view the files in the graphic editor. At this point, no relationships will exist.
 
 ![relationships](/images/40_visualization_and_insights_lab/relationships.png?classes=shadow) 
 
@@ -27,4 +27,4 @@ draft: false
 
 ![relationships-all](/images/40_visualization_and_insights_lab/relationships-all.png?classes=shadow) 
 
-* Click the `Save` icon in the top menu to save off the `Data module` and give appropriate name.
+* Click the **Save** icon in the top menu to save off the **Data module** and give appropriate name.

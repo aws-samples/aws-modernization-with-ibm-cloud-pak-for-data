@@ -18,4 +18,4 @@ When you have completed this Lab, you will understand how to:
 - Build classification and time-series models in IBM Cloud Pak for Data Watson Studio Jupyter notebooks.
 - Visualize data in IBM Cloud Pak for Data Cognos Dashboard Embedded.
 - Build and compare different classification models in IBM Cloud Pak for Data AutoAI Experiments.
-- Invoke Watson Machine Learning model d
+- Invoke Watson Machine Learning model deployed on IBM Cloud pak for Data in you applications running on Amazon Elastic Kubernetes Service (EKS).

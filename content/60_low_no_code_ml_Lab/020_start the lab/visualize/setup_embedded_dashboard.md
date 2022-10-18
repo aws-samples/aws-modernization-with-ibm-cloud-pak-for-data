@@ -14,23 +14,23 @@ You need to create a new Dashboard in your Cloud Pak for Data project in order t
 
 ## Create a new Cognos Embedded Dashboard
 
-- Before you get started, download the {{% button href="/dashboard/Covid-19-predictions-dashboard.zip" icon="fas fa-download" icon-position="right" %}}Covid-19-Predictions-Dashboard.json{{% /button %}} dashboard file and extract the zip file.
+1. Before you get started, download the {{% button href="/dashboard/Covid-19-predictions-dashboard.zip" icon="fas fa-download" icon-position="right" %}}Covid-19-Predictions-Dashboard.json{{% /button %}} dashboard file and extract the zip file.
 
-- Go to Cloud Pak for Data projects, select your project.
-- Click on **New Asset**, under **Graphical builders** select **Dashboard editor**.
+1. Go to Cloud Pak for Data projects, select your project.
+1. Click on **New Asset**, under **Graphical builders** select **Dashboard editor**.
 
-- Select create a new dashboard from **Local file**.
+1. Select create a new dashboard from **Local file**.
   - Upload the `Covid-19-Predictions-Dashboard.json` extracted file.
   - Enter a **name** for the dashboard.
   - Click on **Create**.
 
 ## Relink Data Assets to the Dashboard
 
-- Once the dashboard is created, you will see a message saying **Missing data asset (1/8)**.
+1. Once the dashboard is created, you will see a message saying **Missing data asset (1/8)**.
 
 ![relink](/images/50_low_no_code_ml_Lab/relink.png?classes=shadow)
 
-- To relink the missing data assets, do the following:
+1. To relink the missing data assets, do the following:
   - Click on Relink.
   - Select **Data Assets** and select the dataset.
   - Link the following data assets:

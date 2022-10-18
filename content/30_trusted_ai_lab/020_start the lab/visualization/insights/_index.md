@@ -1,5 +1,5 @@
 ---
-title: "8.2. Insights from Cognos Embedded Dashboard"
+title: "7.2. Insights from Cognos Embedded Dashboard"
 weight: 20
 chapter: false
 draft: false

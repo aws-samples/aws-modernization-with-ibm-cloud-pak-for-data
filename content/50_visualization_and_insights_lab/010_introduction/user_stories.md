@@ -12,7 +12,7 @@ pre: "<b>B. </b>"
 
 In this workshop, we will demonstrate the following 3 use-cases:
 
-1. Showcase `Risk Index widget` which will have complete insights of the current covid metrics.
+1. Showcase **Risk Index widget** which will have complete insights of the current covid metrics.
 2. Display PII details using Data Virtualization as a source where the masked data is showcased.
 3. Showcase the AI capabilities of Cognos Analytics such as Exploration of data and Watson assistant features.
 

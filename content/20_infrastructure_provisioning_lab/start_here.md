@@ -10,8 +10,10 @@ pre: '<i class="fa fa-flask" aria-hidden="true"></i> '
 
 ## Learning Objectives
 
-- Create required services on AWS for Immersion Day
-  - Successful execution of cloud formation templates Cloud9, S3 Bucket, RedShit, Aurora DB resources are created.
+- Prepare the environment for the immersionday upcoming lab exercise
+  - Load data to Amazon S3, AWS Redshift and AWS RDS Aurora.
+  - Create users in IBM Cloud Pak For Data
+  - Generate credential to access the AWS services. 
 
 <!-- -->
 ## Prerequisites
@@ -50,39 +52,7 @@ Your instructor will provide you with the credentials to login.
 
 #### Access Cloud9 Environment through browser console.
 
-1.  Check for the tools installation.
-
-        oc version
-
-    **Expected Output:**
-
-        Client Version: 4.9.23
-        Server Version: 4.8.11
-        Kubernetes Version: v1.21.1+9807387
-
-    Run **aws** command
-
-        aws
-
-
-    **Expected Output:**
-
-        usage: aws [options] <command> <subcommand> [<subcommand> ...] [parameters]
-        To see help text, you can run:
-
-          aws help
-          aws <command> help
-          aws <command> <subcommand> help
-
-        aws: error: the following arguments are required: command
-
-2. Click Cloud9 icon and then click **Preferences**
-    ![](/images/10_infrastructure_provisioning_lab/cred_setting_1.png)
-
-    In the **Preferences** page, click **AWS Settings** then click **AWS Resources**, and then disable **AWS managed temporary credentials** as shown in the below image.
-    ![](/images/10_infrastructure_provisioning_lab/cred_setting_2.png)
-
-3.  Download the scripts from the github.
+1.  Download the scripts from the github.
 
         wget https://github.com/ibm-aws/ibm-aws-quickstart-immersionday/archive/refs/heads/main.zip
 
@@ -90,11 +60,11 @@ Your instructor will provide you with the credentials to login.
 
         unzip main.zip
 
-4. Navigate to the scripts folder
+2. Navigate to the scripts folder
 
         cd ibm-aws-quickstart-immersionday-main/scripts/
 
-5.  Invoke those scripts which will load data for our lab environment.
+3.  Invoke those scripts which will load data for our lab environment.
 
         ./loaddata.sh
 
@@ -166,12 +136,11 @@ Your instructor will provide you with the credentials to login.
 credentials are required while creating connections on Cloud Pak for
 Data.**
 
-1.  Set environment variable.
+1.  Set environment variable. 
 
-        export OCP_USER=ocsadmin
-        export OCP_PASSWORD=ocsadmin
-
-        export OCP_API=https://api.<clustername>.<domainname>:6443
+        export OCP_USER=<<LAB INSTRUCTOR WILL SHARE VALUE>>
+        export OCP_PASSWORD=<<LAB INSTRUCTOR WILL SHARE VALUE>>
+        export OCP_API=<<LAB INSTRUCTOR WILL SHARE VALUE>>
 
     Run command to login to the cluster
 
@@ -183,13 +152,6 @@ Data.**
 
         You have access to 66 projects, the list has been suppressed. You can list all projects with 'oc projects'
 
-    Run **whoami**
-
-        oc whoami --show-console
-
-    **Expected Output:**
-
-        https://console-openshift-console.apps.<clustername>.<domainname>.com
 
 <span class="blue">Create CP4D users and get route details to login.</span>
 
@@ -199,11 +161,11 @@ Data.**
 
     **Expected Output:**
 
-        # initial_admin_password
-        {"User":{"ID":"XXXXXXX"},"_messageCode_":"200","message":"User created successfully."}
-        {"User":{"ID":"XXXXXXX"},"_messageCode_":"200","message":"User created successfully."}
         Users created successfully.
         Password for both XXXXXXX and XXXXXXX is: XXXXXXX
+        Providing access to service instances
+        Giving user access to service instances - In Progress
+        Giving user access to service instances - Done
 
 2.  Get the route.
 

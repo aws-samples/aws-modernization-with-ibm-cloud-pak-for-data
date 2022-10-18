@@ -19,11 +19,10 @@ In this step, you will learn to create a project and setup a connection to Amazo
 
 ## Create project in Cloud Pak for Data
 
-- Before you get started, download the {{% button href="/project/cpd4.5/IBM-AWS-Immersion-Day-Lab-4.zip" icon="fas fa-download" icon-position="right" %}}IBM-AWS-Immersion-Day-Lab-4.zip{{% /button %}} project.
+1. Before you get started, download the {{% button href="/project/cpd4.5/IBM-AWS-Immersion-Day-Lab-4.zip" icon="fas fa-download" icon-position="right" %}}IBM-AWS-Immersion-Day-Lab-4.zip{{% /button %}} project.
 
-- Create a project in IBM Cloud Pak for Data. Click on the <b>&#9776;</b> menu, and select **All Projects**.
-
-  ![cpd-projects](/images/50_low_no_code_ml_Lab/cpd-all-projects.png?classes=shadow)
+1. Create a project in IBM Cloud Pak for Data. Click on the <b>&#9776;</b> menu, and select **All Projects**.
+![cpd-projects](/images/50_low_no_code_ml_Lab/cpd-all-projects.png?classes=shadow)
 
 - Click on **New Project**.
   - Select project type as **Analytics project**.
@@ -31,15 +30,18 @@ In this step, you will learn to create a project and setup a connection to Amazo
   - Upload the **[IBM-AWS-Immersion-Day-Lab-4.zip](/project/cpd4.5/IBM-AWS-Immersion-Day-Lab-4.zip)** file.
   - Enter a project name and click on **Create**.
 
-- Once the project is created click on **View Project**. You should see the overview of the project as shown below.
+3. Once the project is created click on **View Project**. You should see the overview of the project as shown below.
+![cpd-dashboard](/images/50_low_no_code_ml_Lab/cpd-project.png?classes=shadow)
 
-  ![cpd-dashboard](/images/50_low_no_code_ml_Lab/cpd-project.png?classes=shadow)
-
-- Click on the **Assets** tab and you will see **Data** and **Notebooks**.
+4. Click on the **Assets** tab and you will see **Data** and **Notebooks**.
 
 ## Create a Connection to S3
 
-- Click on **New Asset**, under **Data access tools** select **Connection**.
+1. Click on **New Asset**, under **Data access tools** select **Connection**.
+
+{{% notice tip %}}
+You will get these credentials in the **./printcredentials.sh** step from the Infrastructure Provisioning Lab.
+{{% /notice %}}
 
 - Select Connection type as **Amazon S3**.
   - Enter name of the connection as `AWS-S3`.
@@ -58,4 +60,4 @@ In this step, you will learn to create a project and setup a connection to Amazo
 
 > Note: Name the connection variable as `AWS-S3` as it is used in code section of the Jupyter Notebooks.
 
-- Once the connection is created, you will see the connection in Assets tab under **Data assets**. With this connection you can access all the datasets present in your S3 bucket from your Cloud Pak for Data project.
+2. Once the connection is created, you will see the connection in Assets tab under **Data assets**. With this connection you can access all the datasets present in your S3 bucket from your Cloud Pak for Data project.

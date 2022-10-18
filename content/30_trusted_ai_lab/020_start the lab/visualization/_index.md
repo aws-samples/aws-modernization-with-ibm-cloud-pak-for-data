@@ -1,5 +1,5 @@
 ---
-title: "8. Visualization"
+title: "7. Visualization"
 weight: 80
 chapter: false
 draft: false

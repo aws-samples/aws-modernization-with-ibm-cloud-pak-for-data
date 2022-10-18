@@ -8,7 +8,7 @@ pre: "<b>B. </b>"
 
 # Use Cases
 
-COVID cases have started to appear in many of the GRT’s regions. Luckily, the team ow has a good understanding of which regions are susceptibleand the teams available to respond. To minimize outbreak impact, it is essential that the GRT help local agencies maintain a proactive approach to outbreak response and distribute resources based on the number of expected COVID cases. To enable this, you will need to create a model to predict future COVID casesin each region based on regional risk and current COVID levels.you will then use this model to help decide how to commit resources to respond to the pandemic.
+COVID cases have started to appear in many of the GRT’s regions. Luckily, the team has a good understanding of which regions are susceptibleand the teams available to respond. To minimize outbreak impact, it is essential that the GRT help local agencies maintain a proactive approach to outbreak response and distribute resources based on the number of expected COVID cases. To enable this, you will need to create a model to predict future COVID casesin each region based on regional risk and current COVID levels.you will then use this model to help decide how to commit resources to respond to the pandemic.
 
 #### Approach
 

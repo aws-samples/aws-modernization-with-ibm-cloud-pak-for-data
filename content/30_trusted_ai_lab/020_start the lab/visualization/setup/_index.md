@@ -1,5 +1,5 @@
 ---
-title: "8.1. Setup Data Source & Cognos Embedded Dashboard"
+title: "7.1. Setup Data Source & Cognos Embedded Dashboard"
 weight: 10
 chapter: false
 draft: false

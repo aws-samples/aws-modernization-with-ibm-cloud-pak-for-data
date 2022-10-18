@@ -13,34 +13,36 @@ In this section, you will configure a Serverless Application Module (SAM) with c
 
 ## Configure Serverless Application Module (SAM)
 
-- In AWS Console, Navigate to **Services -> Compute -> Lambda**.
+1. In AWS Console, Navigate to **Services -> Compute -> Lambda**.
 
-- Select the Lambda function with the description **Invoke WML model endpoint**.
+1. Select the Lambda function with the description **Invoke WML model endpoint**.
 
-- You will see the Lambda function overview as shown.
+1. You will see the Lambda function overview as shown.
 ![lambda-function-overview](/images/50_low_no_code_ml_Lab/lab4-ext-lambda-overview.png?classes=shadow)
 
-- You can take a look at the code source below function overview. There are two main functions in the server:
+1. You can take a look at the code source below function overview. There are two main functions in the server:
   - `GetToken()`: This function makes an API call to IBM Cloud Pak for Data-Auth Validation and generates a bearer token that will be used invoke Watson Machine Learning Model deployed on Cloud Pak for Data.
   ![get-token-function](/images/50_low_no_code_ml_Lab/lab4-ext-get-token-fn.png?classes=shadow)
   - `InvokeModel()`: This function makes an API call to IBM Cloud Pak for Data-Watson Machine Learning with scoring payload, and gets the model prediction and probability result.
   ![invoke-model-function](/images/50_low_no_code_ml_Lab/lab4-ext-invoke-model-fn.png?classes=shadow)
 
-- To generate the Token and Invoke the model, you need to provide Cloud Pak for Data credentials to the Lambda function.
+5. To generate the Token and Invoke the model, you need to provide Cloud Pak for Data credentials to the Lambda function.
 
-- Select the **Configuration** tab below function overview.
+1. Select the **Configuration** tab below function overview.
 ![lambda-function-config](/images/50_low_no_code_ml_Lab/lab4-ext-lambda-config-tab.png?classes=shadow)
 
-- You will see a left panel with different options, select **Environment variables**. You will see 3 environment variables listed.
+1. You will see a left panel with different options, select **Environment variables**. You will see 3 environment variables listed.
 
-- Click on **Edit** and enter the following details:
+1. Click on **Edit** and enter the following details:
   - **CPD_PASSWORD:** Password used to login to Cloud pak for Data
   - **CPD_USERNAME:** Username used to login to Cloud pak for Data
-  - **CPD_WML_MODEL_ENDPOINT:** Cloud pak for Data Watson Machine Learning model deployed endpoint url copied from Step 4.1.
+  - **CPD_WML_MODEL_ENDPOINT:** Cloud pak for Data Watson Machine Learning model deployed endpoint url copied from previous step.
 
->NOTE: As part of Infra Provisioning Lab, you will have created CP4D users. Enter the same user credentials for **CPD_USERNAME** and **CPD_PASSWORD**.
+{{% notice tip %}}
+As part of Infra Provisioning Lab, you will have created CP4D users. Enter the same user credentials for **CPD_USERNAME** and **CPD_PASSWORD**.
+{{% /notice %}}
 
-- Click on **Save** to update the environment variables.
+9. Click on **Save** to update the environment variables.
 ![edit-env-variables](/images/50_low_no_code_ml_Lab/lab4-ext-edit-env.gif?classes=shadow)
 
-- At this point you have successfully configured the Serverless Application Module(SAM) backend.
+1. At this point you have successfully configured the Serverless Application Module(SAM) backend.

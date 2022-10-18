@@ -1,6 +1,6 @@
 ---
 title: "Watch the Video"
-weight: 50
+weight: 60
 chapter: true
 draft: false
 pre: "<b>E. </b>"

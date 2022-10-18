@@ -24,15 +24,13 @@ It should take you approximately 15 minutes to complete this lab.
 
 ## Lab Steps:
 
-> ### Step 1: Login to IBM Cloud Pak for Data
-
-> 1. Login to IBM Cloud Pak for Data with valid credentials
+> #### Step 1: Login to IBM Cloud Pak for Data
 
 To perform this lab you need IBM Cloud Pak for Data's credential which include both username and password. If you do not have the credentials then refer **Infra Provisioning Lab** to get the one.
 
 ![Login](/images/30_governance_lab/login.png)
 
-> ### 2. Create new project
+> #### Step 2: Create new project
 
 Click on the Navigation Menu and expend Projects and click All Projects. Then click **New Project +** and then select **Analytics project** to create new analytics project
 
@@ -47,34 +45,34 @@ Specify a name to new project and click **Create**
 Once project is created you will see project homepage.
 ![DV Menu](/images/30_governance_lab/project-5.png)
 
-> ### 3. Create new connections with external data sources.
+> #### Step 3: Create new connections with external data sources.
 
-> 1. Click **New asset +**
+1. Click on **Assets** tab and then click **New asset +**
 
 ![Create connection](/images/30_governance_lab/create_connection.png)
 
-Click **Connection**
+Scroll down and click **Connection**
 
 ![Create connection](/images/30_governance_lab/create_connection_1.1.png)
 
 
-> 2. Choose **Amazon S3** as connection type.
+2. Choose **Amazon S3** as connection type.
 
 ![Amazon S3](/images/30_governance_lab/create_connection_2.png)
 
-> 3. Specify Amazon S3 connection details (Provided as part of _Infra Provisioning Lab_ ) to make connection between Amazon S3 and IBM Cloud Pak for Data.
+3. Specify Amazon S3 connection details such as name, bucket name, endpoint, region, and credential details(Provided as part of _Infra Provisioning Lab_ ) to make connection between Amazon S3 and IBM Cloud Pak for Data.
 
-> 4. Click Test connection to validate the connection. If it is successful click Create to create S3 connection.
+4. Click Test connection to validate the connection. If it is successful click **Create** to create S3 connection.
 
 ![Amazon S3 Test Connection](/images/30_governance_lab/test_connection.png)
 
 ![Amazon S3 Test Connection](/images/30_governance_lab/s3_test_connection_success.png)
 
-> 5. Similarly perform same step to create connection for asset type **Amazon Redshift**, and **Amazon RDS for PostgreSQL**.
+5. Similarly perform same step to create connection for asset type **Amazon Redshift**, and **Amazon RDS for PostgreSQL**.
 
 ![Create connection](/images/30_governance_lab/create_connection.png)
 
-Select Amazon Redshift
+Again from the project page, click **New asset +** and then click Connections. Select **Amazon Redshift** connector from available connectors
 
 ![Data Ingestion](/images/30_governance_lab/redshift_connection_page.png)
 
@@ -94,7 +92,7 @@ Specify the connection details provided as part of _Infra Provisioning Lab_  and
 
 ![Data Ingestion](/images/30_governance_lab/aurora_connection.png)
 
-> 6. Since we have created data source connection, now lets ingest data from connected data source. Click **Add asset+** and then click **Connected data**
+6. Since we have created data source connection, now lets ingest data from connected data source. Click **Add asset+** and then click **Connected data**
 
 ![Create connection](/images/30_governance_lab/create_connection.png)
 
@@ -110,7 +108,7 @@ Select Amazon S3 connection and select **apotheca_healthcare_personnel_data.csv*
 Specify a name to data asset
 ![Data Ingestion](/images/30_governance_lab/select_connection_source_s3_1.png)
 
-> 7. Similarly collect data from redshift data source. Click **Add asset+** and then click **Connected data**
+7. Similarly collect data from redshift data source. Click **Add asset+** and then click **Connected data**
 
 ![Create connection](/images/30_governance_lab/create_connection.png)
 
@@ -124,7 +122,7 @@ Select Amazon Redshift connection and select **actavis_pharma_healthcare_personn
 
 ![Data Ingestion](/images/30_governance_lab/redshift_asset_discovery_1.png)
 
-> 8. Similarly ingest data from Amazon Aurora PostgreSQL database. Click **Add asset+** and then click **Connected data**
+8. Similarly ingest data from Amazon Aurora PostgreSQL database. Click **Add asset+** and then click **Connected data**
 
 ![Create connection](/images/30_governance_lab/create_connection.png)
 
@@ -143,116 +141,88 @@ Finally after adding all three connections and data assets, you could see all as
 
 ![Data Ingestion](/images/30_governance_lab/final_data_discovery.png)
 
-> 9. To create integration pipeline, let's click Add assets + then DataStage flow.
+> #### Step 4: Create DataStage pipeline
+
+1. To create integration pipeline, let's click Add assets + then DataStage flow.
 
 ![DataStage](/images/30_governance_lab/datastage.png)
 
-> 10. Enter DataStage flow name and click Create to create new DataStage flow.
 
-![DataStage](/images/30_governance_lab/datastage_flow_1.png)
 
-> 11. DataStage Homepage. Here you will see three options. Connectors to ingest or output to data source. Stages to perform ETL operation and Quality.
+2. **Download** the DataStage pipeline zip file here {{% button href="/datastage/Datastage_Integration_Pipeline.zip" icon="fas fa-download" icon-position="right" %}}Datastage_Integration_Pipeline.zip{{% /button %}}.
 
-![DataStage Homepage](/images/30_governance_lab/datastage_4.png)
+3. Click **ZIP file import** tab and click _Drag and drop file here or upload_ to upload the zip file
+![](/images/30_governance_lab/datastage_new_flow_1.png)
 
-![DataStage Homepage](/images/30_governance_lab/datastage_5.png)
+4. After uploading file click **Import**
+![](/images/30_governance_lab/datastage_new_flow_2.png)
 
-![DataStage Homepage](/images/30_governance_lab/datastage_6.png)
+5. You will see the screen with Import successful with error. ignore the errors for the moment and close the dialog/popup.
+![](/images/30_governance_lab/datastage_new_flow_3.png)
 
-> 12. Click Connectors to expand and then drag and drop Asset Browsers to datastage canvas.
+6. Click on the datastage asset icon 
+![](/images/30_governance_lab/datastage_new_flow_4.png)
 
-![DataStage Asset Browser](/images/30_governance_lab/datastage_7.png)
+7. You will see a datastage pipeline where data is ingested from 3 different sources and there are different stages (to perform ETL operation on incoming data) such as **Funnel** to merge/integrate data, **Remove_Duplicates** stage to filter out duplicates from integrated data, **Sort** stage to sort the data and finally we are storing the data in Amazon RDS database.
+![](/images/30_governance_lab/datastage_new_flow_5.png)
 
-> 13. You need to select data assets to create integration pipeline. Select Data asset and then click all three data assets which ingested in previous step and then click Add.
+8. Now lets link the data assets in this pipeline.
 
-![DataStage Asset Browser](/images/30_governance_lab/browse_asset.png)
+9. Double click on **actavis_pharma_healthcare_personnel_table_1**
+![](/images/30_governance_lab/datastage_new_flow_6.png)
 
-> 14. You should be able to see all three data assets as shown below.
+10. Ignore the error and Close the error popup. This is because we have not yet link the data assets with the datastage pipeline.
+![](/images/30_governance_lab/datastage_new_flow_7.png)
 
-![DataStage Asset Browser](/images/30_governance_lab/browse_asset_1.png)
+11. Expand **Properties** option
+![](/images/30_governance_lab/datastage_new_flow_8.png)
 
-> 15. Now search funnel in the search box and drag and drop Funnel Stage to the canvas.
+12. Click **Connection**. here you will see connection which you have created earlier in this lab. Select the connection and click **Save**
+![](/images/30_governance_lab/datastage_new_flow_9.png)
 
-![DataStage Asset Browser](/images/30_governance_lab/funnel.png)
+13. Repeat the same steps for **mylan_specialty_personnel_data_table_1** connection.
 
-> 16. Create links from all data assets to Funnel Stage as shown in below picture.
+14. Now click on **apotheca_healthcare_personnel_data_1** and choose the S3 connection under Connection option similar what we did in the last steps. **But** here you also need to specify the S3 Bucket name which you should receive as the output of infra provisioning lab. 
+![](/images/30_governance_lab/datastage_new_flow_10.png)
 
-![DataStage Asset Browser](/images/30_governance_lab/funnel_1.png)
+15. Click **Save**
 
-> 17. Double click on all three data assets one by one and then click Output tab and then click Edit column to verify Data type, length and nullability of all columns
+16. Double Click **Amazon_RDS_for_PostgreSQL_1**
+![DataStage](/images/30_governance_lab/datastage_new_flow_10_1.png)
 
-![DataStage Asset Browser](/images/30_governance_lab/datastage_asset.png)
+17. Update Connection as shown below. **Don't** click save.
+![DataStage](/images/30_governance_lab/datastage_new_flow_11.png)
 
-![DataStage Asset Browser](/images/30_governance_lab/s3_type.png)
+18. Specify the name to output table name. eg **Datastage_Output_Table_v1** and then click **Save**
+![](/images/30_governance_lab/datastage_new_flow_12.png)
 
-![DataStage Asset Browser](/images/30_governance_lab/redshift_type.png)
+19. Click **Compile** to validate if everything is file. Within a few seconds you should get **Compile successful.** message.
+![](/images/30_governance_lab/datastage_new_flow_13.png)
 
-![DataStage Asset Browser](/images/30_governance_lab/aurora_type.png)
+20. Click **Run** to run the pipeline. After a few couple of seconds you should see Run successful message.
+![](/images/30_governance_lab/datastage_new_flow_14.png)
 
-> 18. Search remove duplicate stage and again drag and drop the stage.
-
-![DataStage Asset Browser](/images/30_governance_lab/remove_duplicate_by_1.png)
-
-> 19. Double click on Remove Duplicate Stage and click **Edit** to specify keys that define duplicates
-
-![DataStage Asset Browser](/images/30_governance_lab/remove_duplicate_by_2.png)
-
-Click **Add key +**
-![DataStage Asset Browser](/images/30_governance_lab/remove_duplicate_by_3.png)
-
-Specify **id** as key
-![DataStage Asset Browser](/images/30_governance_lab/remove_duplicate_by_4.png)
-
-Verify that **id** is coming as key and then click **Save**
-![DataStage Asset Browser](/images/30_governance_lab/remove_duplicate_by_5.png)
-
-> 20. Search sort and drag and drop Sort stage.
-
-![DataStage Asset Browser](/images/30_governance_lab/sort_by_1.png)
-
-Double click on Sort stage and then click **Edit** in Sorting Keys.
-![DataStage Asset Browser](/images/30_governance_lab/sort_by_2.png)
-
-Select **id** as sort key and click **Apply** button
-![DataStage Asset Browser](/images/30_governance_lab/sort_by_3.png)
-
-Click **Apply and return**
-![DataStage Asset Browser](/images/30_governance_lab/sort_by_4.png)
-
-Verify that **id** is coming as Sorting key and then click **Save**
-![DataStage Asset Browser](/images/30_governance_lab/sort_by_5.png)
-
-> 21. Search **rds** and then drag and drop **Amazon RDS for PostgreSQL** connector to canvas.
-
-![DataStage Asset Browser](/images/30_governance_lab/datastage_output_1.png)
-
-> 22. Double click on RDS connector to specify data source and specify a unique name to SQL table
-
-![DataStage Asset Browser](/images/30_governance_lab/datastage_output_2.png)
-
-> 23. Compile the datastage pipeline and run if compile succeeded.
-
-![DataStage Asset Browser](/images/30_governance_lab/compile.png)
-
-![DataStage Asset Browser](/images/30_governance_lab/compile_success.png)
-
-![DataStage Asset Browser](/images/30_governance_lab/run_success.png)
-
-> 25. Now we have integrated data available in Amazon RDS for PostgreSQL. Let's ingest the data from the data source
+> #### Step 4: Ingest the integrated data into the project
+1. Now we have integrated data available in Amazon RDS for PostgreSQL. Let's ingest the data from the data source
 
 ![Create connection](/images/30_governance_lab/create_connection.png)
 
 ![Data Ingestion](/images/30_governance_lab/create_connection_1.1_gen.png)
 
 
-Click **Select source**
+2. Click **Select source**
 ![Data Ingestion](/images/30_governance_lab/select_data_source.png)
 
-Search the integrated table and click **Select**
+3. Search the integrated table and click **Select**
+{{% notice note %}}
+The file name should be same what you have specified as the output. eg. **Datastage_Output_Table_v1**
+{{% /notice %}}
 ![DataStage Asset Browser](/images/30_governance_lab/integrated_table.png)
 
+4. Specify the name of the asset
 ![DataStage Asset Browser](/images/30_governance_lab/integrated_table_1.png)
 
+5. Verify the data asset is there in project. This asset will be used later in the next lab.
 ![DataStage Asset Browser](/images/30_governance_lab/integrated_table_2.png)
 
 
