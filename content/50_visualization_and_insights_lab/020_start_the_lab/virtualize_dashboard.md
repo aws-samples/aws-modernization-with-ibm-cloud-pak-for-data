@@ -13,17 +13,17 @@ In this section we will use a Dashboard module which provides users a way to com
 
 ### Create a Dashboard
 
-From the Cognos Analytics home page, select the **+ New** icon in the lower left corner. Select **Dashboard**. Select the default template and click on **Create**.
+1. From the Cognos Analytics home page, select the **+ New** icon in the lower left corner. Select **Dashboard**. Select the default template and click on **Create**.
 
-Click **Select a source** and Select the **Data module** you just created in the previous section, and click **Add**.
+2. Click **Select a source** and Select the **Data module** you just created in the previous section, and click **Add**.
 
 ![SelectSourceDM](/images/40_visualization_and_insights_lab/SelectSourceDM.png?classes=shadow) 
 
-Now you should see a blank canvas to create your dashboard.
+3. Now you should see a blank canvas to create your dashboard.
 
 ![DashBoardTables](/images/40_visualization_and_insights_lab/DashBoardTables.png?classes=shadow) 
 
-In order to build a dashboard, one should be aware of the tools and icons how to use.
+4. In order to build a dashboard, one should be aware of the tools and icons how to use.
 
 ![DashBoardTools](/images/40_visualization_and_insights_lab/DashBoardTools.png?classes=shadow)
 
@@ -39,7 +39,7 @@ From the image above:
 - [8] Displays the properties associated with the selected visual object.
 - [9] Filters that can be applied to dashboard visual objects. The filter can be set for all dashboard tabs (left side), or for the current tab (righ side).
 
-There are different types of visualizations available for us to consume. See below screenshot for reference.
+5. There are different types of visualizations available for us to consume. See below screenshot for reference.
 
 ![charts](/images/40_visualization_and_insights_lab/charts.png?classes=shadow)
 
@@ -49,33 +49,33 @@ There are different types of visualizations available for us to consume. See bel
 
 Our first visualization will be a Map containing "Risk Index for REGION". It will also serve as a filter - if a region is selected, all of the other visualizations on the dashboard will change its focus to that region. Example, if we select 'Belgium' region, then the rest of the widgets in the dashboard will filter for that region.
 
-Select **'REGION' and 'Risk Index' from the  -> ts-data-region_mod** in the resource list and drag it onto the canvas.
+1. Select **'REGION' and 'Risk Index' from the  -> ts-data-region_mod** in the resource list and drag it onto the canvas.
 
 
 ![RiskIndexWidget](/images/40_visualization_and_insights_lab/RiskIndexWidget.png?classes=shadow)
 
-Use the box sizing tools to position the box in the upper left-hand corner of the dashboard.
+2. Use the box sizing tools to position the box in the upper left-hand corner of the dashboard.
 
-Use the **Expand/Collapse** button in the upper right-hand corner of your visualization to view in expanded or collapse the view in your dashboard canvas.
+3. Use the **Expand/Collapse** button in the upper right-hand corner of your visualization to view in expanded or collapse the view in your dashboard canvas.
 
-Now, you can play with the properties for this widget. For example, we can disable the chart legend. See below screenshot for reference.
+4. Now, you can play with the properties for this widget. For example, we can disable the chart legend. See below screenshot for reference.
 ![DisableLegend](/images/40_visualization_and_insights_lab/DisableLegend.png?classes=shadow)
 
-Using the same methods described for **Risk Index map widget**, change the title, axis labels, and color, etc..
+5. Using the same methods described for **Risk Index map widget**, change the title, axis labels, and color, etc..
 
 ### Summary Metrics Widget
 
-Next we want to show the summary of metrics such as Total number of Active Cases bye region, Total deaths, Total Vaccination, Total tests done, etc..
+1. Next we want to show the summary of metrics such as Total number of Active Cases bye region, Total deaths, Total Vaccination, Total tests done, etc..
 
-From the available visualizations, drag and drop the **summary** vissualization onto the canvas. See below screenshot for refernce.
+2. From the available visualizations, drag and drop the **summary** vissualization onto the canvas. See below screenshot for refernce.
 
 ![SummaryWidget](/images/40_visualization_and_insights_lab/SummaryWidget.png?classes=shadow)
 
-Select **CASES** field from the **Merged_HOSP_CAS** of the resource list. You will then see the total active covid cases for all the regions.
+3. Select **CASES** field from the **Merged_HOSP_CAS** of the resource list. You will then see the total active covid cases for all the regions.
 ![ActiveCasesSummary](/images/40_visualization_and_insights_lab/ActiveCasesSummary.png?classes=shadow)
 
 
-Similary create summary for others. Such as :
+4. Similary create summary for others. Such as :
 
 - Total Tests count from the Tests_Refined Resource list.
 
@@ -89,18 +89,18 @@ Similary create summary for others. Such as :
 
 ### Cases by Gender and Age group
 
-Similar to the **Risk Index** chart, we want to also show Covid analysis by Gender and Age group. 
+1. Similar to the **Risk Index** chart, we want to also show Covid analysis by Gender and Age group. 
 
-Firstly drag and drop the pie chart visulaization on to the canvas, then
+2. Firstly drag and drop the pie chart visulaization on to the canvas, then
 Select **Gender and Count** from Merged_HOSP-CAS resource and drag and drop on the pie chart.
 ![PieChartGender](/images/40_visualization_and_insights_lab/PieChartGender.png?classes=shadow)
 
-Similaly, create a line chart for Total covid Cases by Age Group.
+3. Similaly, create a line chart for Total covid Cases by Age Group.
 Drag and drop the Line chart visulaization on to the canvas, then
 Select **Age Group and Count** from Merged_HOSP-CAS resource and drag and drop on the pie chart.
 ![LineChartAgeGroup](/images/40_visualization_and_insights_lab/LineChartAgeGroup.png?classes=shadow)
 
-With the above knowledge, you should be able to create other widgets such as:
+4. With the above knowledge, you should be able to create other widgets such as:
 
 - PII details of the Hospital Staff
 - Total cases by province
@@ -109,22 +109,22 @@ With the above knowledge, you should be able to create other widgets such as:
 
 ### Create a second tab for Data virtualization source data within the same dashboard
 
-Click on **Add tab** to add more visualization using data virtualization as a data source.
+1. Click on **Add tab** to add more visualization using data virtualization as a data source.
 
 ![Tab2](/images/40_visualization_and_insights_lab/Tab2.png?classes=shadow)
 
-Click **Select a source** and Select the **Data module** you created for data virtualization source, and click **Add**.
+2. Click **Select a source** and Select the **Data module** you created for data virtualization source, and click **Add**.
 
 ![DvDataSource](/images/40_visualization_and_insights_lab/DvDataSource.png?classes=shadow)
 
-After you add the data virtualization data source, you should be able to create widgets similar to the above steps.
+3. After you add the data virtualization data source, you should be able to create widgets similar to the above steps.
 See the below widget for your reference which will help to create a similar one.
 
 ![DVDashboard](/images/40_visualization_and_insights_lab/DVDashboard.png?classes=shadow)
 
-Once you complete the above widgets, Save the dashboard.
+4. Once you complete the above widgets, Save the dashboard.
 
-To convert the dahsboard visual theme, you could use the dashboard properties and select the Dark scheme from **Color and theme**tab.
+5. To convert the dahsboard visual theme, you could use the dashboard properties and select the Dark scheme from **Color and theme**tab.
 See below screenshot for refernce.
 
 ![DarkMode](/images/40_visualization_and_insights_lab/DarkMode.png?classes=shadow)

@@ -5,31 +5,39 @@ chapter: false
 draft: false
 ---
 
-**The SageMaker notebooks from step # 1 have to be uploaded to Cloud Pak for Data.** You can download the notebook below if you have not done it in step # 1. 
+**We will upload the notebook/s into Watson Studio project.** 
 
-**Download** the notebook {{% button href="/data-pre-processing/Data-pre-processing.ipynb" icon="fas fa-download" icon-position="right" %}}Data-pre-processing.ipynb{{% /button %}} into your local file system. 
-
-We will upload **Data-pre-processing.ipynb** notebook into Watson Studio project. The remaining three notebooks are **optional & can be uploaded offline**. 
+> **Step 1**
 
 Log in to the project in Cloud Pak for Data and click on **Assets**
 
 ![](/images/20_trusted_ai_lab/assets.png)
 
+> **Step 2**
+
 Click on **New asset**
 
 ![](/images/20_trusted_ai_lab/new-assets.png)
+
+> **Step 3**
 
 Click on **Code editors**
 
 ![](/images/20_trusted_ai_lab/code-editor.png)
 
+> **Step 4**
+
 Click on **Jupyter notebook editor**
 
 ![](/images/20_trusted_ai_lab/nb-editor.png)
 
+> **Step 5**
+
 Select **From file** option - choose the default runtime (1vCPU & 2GB RAM) to run the notebook. You can click on **Drag and drop files here or upload** and select the **Data-pre-processing.ipynb** notebook from your local file system. Hit the **Create** button to start the upload process of the notebook. 
 
 ![](/images/20_trusted_ai_lab/from-file.png)
+
+> **Step 6**
 
 Click on **Kernel** and choose **Restart & Run All** option as per the sample image below.
 

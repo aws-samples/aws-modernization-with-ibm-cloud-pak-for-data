@@ -25,6 +25,8 @@ It should take you approximately 15 minutes to complete this lab.
 
 >#### Step 1: Create Rules for Data Masking and Obfuscating
 
+We have healthcare personnel data which we integrated and cleansed in the last (ETL) lab. Healthcare personnel data contains **sensitive PII** information. In this lab we will create Rules and Policies to mask and obfuscate **Email address** and **last name**.
+
 1. Click navigation menu then expand Governance and then click Rules.
 
 ![Data Ingestion](/images/30_governance_lab/governance_1.png)
@@ -34,7 +36,7 @@ It should take you approximately 15 minutes to complete this lab.
 ![Data Ingestion](/images/30_governance_lab/rules.png)
 ![Data Ingestion](/images/30_governance_lab/governance_3.png)
 
-3. Add rule for Email Address masking.
+3. Add rule for Email Address masking. Select **Email Address** data class to mask the data. When you profile your assets (in the catalog), a data class will be inferred from the contents where possible.
 
 ![Data Ingestion](/images/30_governance_lab/rules_1.png)
 ![Data Ingestion](/images/30_governance_lab/governance_9.png)
@@ -46,14 +48,14 @@ It should take you approximately 15 minutes to complete this lab.
 ![Data Ingestion](/images/30_governance_lab/governance_10.png)
 ![Data Ingestion](/images/30_governance_lab/governance_11.png)
 
-5. Create Category PII_CATEGORY.
+5. We have created two rules for Email address and lastname. Let's create **Category** PII_CATEGORY. The fundamental abstraction in Watson Knowledge Catalog is the Category.
 
 ![Data Ingestion](/images/30_governance_lab/governance_13.png)
 ![Data Ingestion](/images/30_governance_lab/governance_14.png)
 ![Data Ingestion](/images/30_governance_lab/governance_15.png)
 ![Data Ingestion](/images/30_governance_lab/governance_16.png)
 
-6. Create Business Term and Publish it.
+6. Again from the Main Menu, select Business Term under Governance. Use **Business Term** to define business concepts in a standard way that makes your data consistent and easy to understand across the enterprise. Follow the below steps to create Business Term and publish it. 
 
 ![Data Ingestion](/images/30_governance_lab/governance_24.png)
 ![Data Ingestion](/images/30_governance_lab/governance_23.png)
@@ -77,11 +79,11 @@ It should take you approximately 15 minutes to complete this lab.
 ![Data Ingestion](/images/30_governance_lab/catalog_governance_1.png)
 ![Data Ingestion](/images/30_governance_lab/catalog_governance_2.png)
 
-10. Go back to the catalog which you have created and click `Access control` tab and click `Add collaborators +`
+10. Go back to the catalog which you have created and click **Access control** tab and click **Add collaborators +**
 
 ![](/images/30_governance_lab/add_user_to_catalog_1.png)
 
-11. Add datascientist user which might have received during this lab as collaborator with `Viewer` role.
+11. Add datascientist user which might have received during this lab as collaborator with **Viewer** role.
 
 ![](/images/30_governance_lab/add_user_to_catalog_2.png)
 
@@ -93,4 +95,4 @@ With the above all steps you have successfully created data masking and obfuscat
 
 ## Summary
 
-This lab you have learned how to create data protection rules and apply it to asset using IBM Watson Knowledge Catalog.
+This lab you have learned how to create data protection rules and apply it to protect sensitive information using IBM Watson Knowledge Catalog.

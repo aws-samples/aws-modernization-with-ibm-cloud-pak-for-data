@@ -56,7 +56,7 @@ Scroll down and click **Connection**
 ![Create connection](/images/30_governance_lab/create_connection_1.1.png)
 
 
-2. Choose **Amazon S3** as connection type.
+2. Here you should see many IBM CP4D connectors. Choose **Amazon S3** connector.
 
 ![Amazon S3](/images/30_governance_lab/create_connection_2.png)
 
@@ -92,57 +92,8 @@ Specify the connection details provided as part of _Infra Provisioning Lab_  and
 
 ![Data Ingestion](/images/30_governance_lab/aurora_connection.png)
 
-6. Since we have created data source connection, now lets ingest data from connected data source. Click **Add asset+** and then click **Connected data**
-
-![Create connection](/images/30_governance_lab/create_connection.png)
-
-![Data Ingestion](/images/30_governance_lab/create_connection_1.1_gen.png)
-
-
-Click **Select source**
-![Data Ingestion](/images/30_governance_lab/select_data_source.png)
-
-Select Amazon S3 connection and select **apotheca_healthcare_personnel_data.csv** and then click **Select**
-![Data Ingestion](/images/30_governance_lab/select_connection_source_s3.png)
-
-Specify a name to data asset
-![Data Ingestion](/images/30_governance_lab/select_connection_source_s3_1.png)
-
-7. Similarly collect data from redshift data source. Click **Add asset+** and then click **Connected data**
-
-![Create connection](/images/30_governance_lab/create_connection.png)
-
-![Data Ingestion](/images/30_governance_lab/create_connection_1.1_gen.png)
-
-Click **Select source**
-![Data Ingestion](/images/30_governance_lab/select_data_source.png)
-
-Select Amazon Redshift connection and select **actavis_pharma_healthcare_personnel_table** and then click **Select**
-![Data Ingestion](/images/30_governance_lab/redshift_asset_discovery.png)
-
-![Data Ingestion](/images/30_governance_lab/redshift_asset_discovery_1.png)
-
-8. Similarly ingest data from Amazon Aurora PostgreSQL database. Click **Add asset+** and then click **Connected data**
-
-![Create connection](/images/30_governance_lab/create_connection.png)
-
-![Data Ingestion](/images/30_governance_lab/create_connection_1.1_gen.png)
-
-Click **Select source**
-![Data Ingestion](/images/30_governance_lab/select_data_source.png)
-
-Select Amazon RDS for PostgreSQL connection and select **mylan_specialty_personnel_data_table** and then click **Select**
-
-![Data Ingestion](/images/30_governance_lab/aurora_select_connection_source.png)
-
-![Data Ingestion](/images/30_governance_lab/aurora_connected_data_asset.png)
-
-Finally after adding all three connections and data assets, you could see all assets in the project.
-
-![Data Ingestion](/images/30_governance_lab/final_data_discovery.png)
-
 > #### Step 4: Create DataStage pipeline
-
+Now, we have connected to external data sources. Let's go back to newly created project to integrate data from those 3 connections.
 1. To create integration pipeline, let's click Add assets + then DataStage flow.
 
 ![DataStage](/images/30_governance_lab/datastage.png)

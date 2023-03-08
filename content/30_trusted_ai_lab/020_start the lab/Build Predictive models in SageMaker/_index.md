@@ -10,6 +10,8 @@ draft: false
 
 Kindly keep the credentials from CPD, S3, SageMaker, DB2 handy for getting started with Trusted AI.
 
+{{% notice info %}}
+
 **You would need the below for this Lab** :- You will get these details in the **./printcredentials.sh** step from the Infrastructure Provisioning Lab.
 
 * **S3 Bucket Name**
@@ -18,11 +20,17 @@ Kindly keep the credentials from CPD, S3, SageMaker, DB2 handy for getting start
 * **CPD username & password**
 * **DB2 Hostname, username & password**
 
+{{% /notice %}}
+
+> **Step 1**
+
 **Download** the notebook {{% button href="/data-pre-processing/Data-pre-processing.ipynb" icon="fas fa-download" icon-position="right" %}}Data-pre-processing.ipynb{{% /button %}} into your local file system.
 
 **Please make sure to update the Region, Access Key & Secret Key in the Notebook wherever specified before running the notebook.**
 
 **We have created multiple SageMaker Notebooks for this lab to simulate the Data Science experience.** You can start by uploading **Data-pre-processing.ipynb** notebook and try the remaining three notebooks offline using the same process.
+
+> **Step 2**
 
 **Create a SageMaker Notebook instance**
 
@@ -30,17 +38,25 @@ Login to the SageMaker console and click on Notebook instances under Notebook in
 
 ![](/images/20_trusted_ai_lab/sm-login.png)
 
+> **Step 3**
+
 Click on create notebook instance, give it at name like **Lab1**, select the Notebook instance type as **ml.t2.medium**, Platform Identifier as **Amazon Linux 2, Jupyter Lab 1** & IAM role as shown below. It will take a couple of minutes for the instance to be created. Be patient!
 
 ![](/images/20_trusted_ai_lab/crt-nb-sm.png)
 
+> **Step 4**
+
 After the instance is created, click on open Jupyter. Click on **Upload** on the top right side to upload notebooks. 
+
+> **Step 5**
 
 Select the Kernel as **conda_python3** when prompted and choose **Set Kernel** option. 
 
 **Note**:-You can upload all the notebooks in one go by clicking on UPLOAD option, select the notebooks and run them in SageMaker. After the notebooks are uploaded, it will reflect per below.
 
 ![](/images/20_trusted_ai_lab/opn-nb-sm.png)
+
+> **Step 6**
 
 **After uploading the notebook/s, click on the notebook hyperlink to open it, update the AWS credentials, click on Kernel and choose Restart & Run All option.** 
 
@@ -51,6 +67,8 @@ Select the Kernel as **conda_python3** when prompted and choose **Set Kernel** o
 **You should see something like this after successfully running the Notebooks.**
 
 ![](/images/20_trusted_ai_lab/nb-run.png)
+
+> **Step 7**
 
 **Let's download the SageMaker Notebook/s to be ported to Cloud Pak for Data - Select/Open the notebook - click on File - Download as - Notebook(.ipynb) into your local file system.** >  
 
